@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Student Details LNCTE</title>
+</head>
+
+<body>
+    <h1>Welcome to {{ name }}</h1>
+    <h2>LNCTU Details Entry</h2>
+    <h3>Enter Details here.....</h3>
+    <!-- Security token -->
+    
+    <form action="insert" method="POST">
+        {% csrf_token %} 
+        <table>
+            <tr>
+                <td>Student Name:</td>
+                <td><input type="text" id="studentName" name="studentName"></td>
+            </tr>
+            <tr>
+                <td>Student Roll No:</td>
+                <td><input type="text" id="studentRollNo" name="studentRollNo"></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><input type="submit" value="Inser Details"></td>
+            </tr>
+        </table>
+    </form>
+</body>
+
+</html>

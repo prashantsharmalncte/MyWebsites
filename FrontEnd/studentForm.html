@@ -1,0 +1,28 @@
+<html>  
+<head>   
+<title>Student Form</title>  
+</head>  
+<body>  
+
+<form method="POST" action="#">  
+{% csrf_token %}  
+<input type="text" placeholder="Enter Student name" name="studentName" value=""/>
+<input type="text"  placeholder="Enter Student RollNo" name="studentRollNo" value=""/>
+<button type="submit">Insert</button> 
+</form>  
+
+<form method="GET" action="/delete">  
+<input type="text" placeholder="Enter Student name" name="studentName" value=""/>
+<button type="submit">Delete</button> 
+</form> 
+
+<form method="POST" action="/update">  
+{% csrf_token %}  
+<input type="text" placeholder="Enter Student name" name="studentName" value=""/>
+<input type="text"  placeholder="Enter Student RollNo" name="studentRollNo" value=""/>
+<button type="submit">Update</button> 
+</form> 
+
+<a href="/show">Show Data</a>
+</body>  
+</html> 
